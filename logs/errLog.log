@@ -1,0 +1,41 @@
+20220909	03:32:06	5c46fa27-d75c-4635-a0ca-120427e9a9cd	Error: Not allowed by CORS!	OPTIONS	/	https://www.google.com
+20220909	03:32:06	6e7b023d-8107-4d8d-bba8-3f7104279ee1	Error: Not allowed by CORS!	GET	/	https://www.google.com
+20220909	04:56:22	38359ebc-4bf6-4ef2-a8f5-d680251ebdba	MongoServerError: user is not allowed to do action [find] on [BANGLADESHCAREEROLYMPIAD.users]	GET	/api/users	undefined
+20220909	05:02:04	8ebb934b-af95-4043-9c37-468f119fa2b9	MongoServerError: user is not allowed to do action [find] on [Carrer_bangladesh.users]	GET	/api/users	undefined
+20220909	05:02:07	f9bf55be-f69d-41c7-adef-aca9449c232a	MongoServerError: user is not allowed to do action [find] on [Carrer_bangladesh.users]	GET	/api/users	undefined
+20220909	05:02:08	8f5d19be-eef8-436a-bbd0-45cb59236be5	MongoServerError: user is not allowed to do action [find] on [Carrer_bangladesh.users]	GET	/api/users	undefined
+20220909	05:02:09	392e8f28-ed72-4d70-a7f8-8e007d43d7ba	MongoServerError: user is not allowed to do action [find] on [Carrer_bangladesh.users]	GET	/api/users	undefined
+20220909	05:02:57	fca95b5d-e5ac-4dc7-ba49-7149d3e82f75	MongoServerError: user is not allowed to do action [find] on [Carrer_bangladesh.users]	POST	/api/users	undefined
+20220909	05:02:59	2b992a44-9d63-4b1f-8bfd-f8bf6f387a35	MongoServerError: user is not allowed to do action [find] on [Carrer_bangladesh.users]	POST	/api/users	undefined
+20220909	05:03:01	acd32645-2ea2-4936-a607-81870d2cce23	MongoServerError: user is not allowed to do action [find] on [Carrer_bangladesh.users]	POST	/api/users	undefined
+20220909	05:03:02	3362d4e4-61a0-46e5-a157-402e5753dc91	MongoServerError: user is not allowed to do action [find] on [Carrer_bangladesh.users]	POST	/api/users	undefined
+20220909	05:03:04	627aa42a-e0b9-4e3e-bf95-6964afa8b6df	MongoServerError: user is not allowed to do action [find] on [Carrer_bangladesh.users]	POST	/api/users	undefined
+20220909	05:04:18	b19771ba-b9b6-4211-a2fd-af5611eff452	MongoServerError: user is not allowed to do action [find] on [Carrer_bangladesh.users]	POST	/api/users	undefined
+20220909	05:04:20	46106f2d-0300-4a3f-b35e-a6b1cd3b9194	MongoServerError: user is not allowed to do action [find] on [Carrer_bangladesh.users]	POST	/api/users	undefined
+20220909	05:05:48	cd0c3ecf-1053-48eb-977d-73486bf973b9	MongoServerError: user is not allowed to do action [find] on [Carrer_bangladesh.users]	POST	/api/users	undefined
+20220909	05:05:58	148b14d7-4459-4762-bb58-cbf18f2cafa8	MongoServerError: user is not allowed to do action [find] on [Carrer_bangladesh.users]	POST	/api/users	undefined
+20220909	05:06:16	972a28c9-377d-4bce-8e36-bb5964699a40	MongoServerError: user is not allowed to do action [find] on [Carrer_bangladesh.users]	POST	/api/users	undefined
+20220909	05:14:49	cced38ee-36b0-48d3-861d-68099309274d	MongoServerError: user is not allowed to do action [find] on [test.users]	POST	/api/users	undefined
+20220909	05:14:51	ffa92b98-4902-4e77-881d-5e29aaf1bed8	MongoServerError: user is not allowed to do action [find] on [test.users]	POST	/api/users	undefined
+20220909	05:24:28	41b4f5c6-2da5-422c-a2a4-82b805ec94d8	TypeError: user.select is not a function	DELETE	/api/users	undefined
+20220910	01:38:22	c45fb963-d0d8-4c86-9c14-e23a5c7de80c	ValidationError: User validation failed: details.level: Path `details.level` is required., details.email: Path `details.email` is required., details.upazila: Path `details.upazila` is required., details.district: Path `details.district` is required., details.division: Path `details.division` is required., details.phone: Path `details.phone` is required., details.fullname: Path `details.fullname` is required.	POST	/api/users	undefined
+20220910	01:40:45	3cebf22d-5ee2-4a52-b75a-d7ee8e177f3e	ReferenceError: upaxila is not defined	POST	/api/users	undefined
+20220910	01:45:48	43204098-7207-4ad4-9386-ed552dff8ae4	ValidationError: User validation failed: details.email: Path `details.email` is required.	POST	/api/users	undefined
+20220910	01:47:06	a2fb4996-9092-4f89-8b02-610f2a60c5eb	ValidationError: User validation failed: details.email: Path `details.email` is required.	POST	/api/users	undefined
+20220910	02:23:01	6d2f340d-9cef-498a-b877-987ca1f14ce7	Error: Not allowed by CORS!	OPTIONS	/api/users	https://career-olympiad-bangladesh.netlify.app
+20220911	23:15:29	80b0d4db-a432-4ecb-b18c-f0303e140da6	ValidationError: User validation failed: details.phone: Cast to Number failed for value "sdfsd" (type string) at path "details.phone"	POST	/api/users	http://localhost:3000
+20220911	23:16:03	145402ed-00b7-49a6-aa2c-5c33b4dccb3f	ValidationError: User validation failed: details.phone: Cast to Number failed for value "sdfsd" (type string) at path "details.phone"	POST	/api/users	http://localhost:3000
+20220911	23:16:06	239e6123-6149-48a5-8236-5c52f9e08593	ValidationError: User validation failed: details.phone: Cast to Number failed for value "sdfsd" (type string) at path "details.phone"	POST	/api/users	http://localhost:3000
+20220911	23:16:14	0976d65a-7799-4ad9-ab62-ad61ec21ef05	ValidationError: User validation failed: details.phone: Cast to Number failed for value "sdfsd" (type string) at path "details.phone"	POST	/api/users	http://localhost:3000
+20220911	23:16:40	98078329-50c5-4e1c-b56e-4a18fc047d06	ValidationError: User validation failed: details.phone: Cast to Number failed for value "sdfsd" (type string) at path "details.phone"	POST	/api/users	http://localhost:3000
+20220919	20:37:51	66c04a1b-b631-4a6a-bf3a-b84cd823cbd2	ReferenceError: User is not defined	POST	/api/products	undefined
+20220919	20:41:02	d1aa2392-3c10-49cb-9ff1-4e6a6eae8488	ReferenceError: user is not defined	DELETE	/api/products/63287edce8ac3e446add049c	undefined
+20220919	20:41:58	fc381926-36f7-4850-bc17-e72a43e27d15	ReferenceError: user is not defined	DELETE	/api/products/63287fa991513ab6ecda140f	undefined
+20220919	20:50:45	92ebacb1-ae62-480b-84bb-5c8bcccc4f2e	TypeError: Cannot read properties of undefined (reading 'exec')	GET	/api/products	undefined
+20220919	20:55:36	1ab5f790-bd1d-4f03-9c42-f7bfb9fb88ff	ReferenceError: FooModel is not defined	GET	/api/products	undefined
+20220919	20:55:37	f3d55fe2-e85e-4996-b98b-a1e6f05f6712	ReferenceError: FooModel is not defined	GET	/api/products	undefined
+20220919	20:56:56	0d53d30a-00fd-482c-b2d4-46efec2134a9	ReferenceError: resp is not defined	GET	/api/products	undefined
+20220919	21:04:35	7f8c2547-d595-4de3-be2e-8a3f4bf407a0	ValidationError: User validation failed: password: Path `password` is required.	POST	/api/users	undefined
+20220919	21:04:58	8b61eb85-bb67-495a-a96d-fa9c7d3866e2	ValidationError: User validation failed: password: Path `password` is required.	POST	/api/users	undefined
+20220919	21:05:17	3ccbab33-724d-4754-a66a-905613791969	ValidationError: User validation failed: password: Path `password` is required.	POST	/api/users	undefined
+20220919	21:05:19	712d245f-d418-4067-aca5-91b187481217	ValidationError: User validation failed: password: Path `password` is required.	POST	/api/users	undefined
