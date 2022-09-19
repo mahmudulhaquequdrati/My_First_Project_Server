@@ -1,19 +1,31 @@
 const Product = require("../models/product");
 const asyncHandler = require("express-async-handler");
+const { Cursor } = require("mongoose");
 /* ============DONE========= */
 // @desc Get all users
 // @route GET /users
 // @access Private
 const getAllProduct = asyncHandler(async (req, res) => {
-  const pageSize = 10;
-  const currentPage = req.query.page || 1;
-  const products = await Product.find()
-    .skip(pageSize * (currentPage - 1))
-    .limit(pageSize);
-  const productNum = await Product.countDocuments();
-  res.setHeader("max-records", productNum);
-  res.status(200).json(products);
-  // if (!product) {
+  const cursor = await Product.find({});
+  const count = await Product.countDocuments({});
+  console.log(count);
+  const page = req.query.page || 1;
+  const size = parseInt(req.query.size) || 9;
+
+  let allProducts;
+
+  if (page) {
+    allProducts = await Product.find({})
+      .skip(page * size)
+      .limit(size)
+      .lean();
+  } else {
+    allProducts = await cursor.toArray();
+  }
+  res.json({
+    count,
+    allProducts,
+  });
   //   return res.status(400).json({
   //     message: "No Product found!",
   //   });

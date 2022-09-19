@@ -39,3 +39,6 @@
 20220919	21:04:58	8b61eb85-bb67-495a-a96d-fa9c7d3866e2	ValidationError: User validation failed: password: Path `password` is required.	POST	/api/users	undefined
 20220919	21:05:17	3ccbab33-724d-4754-a66a-905613791969	ValidationError: User validation failed: password: Path `password` is required.	POST	/api/users	undefined
 20220919	21:05:19	712d245f-d418-4067-aca5-91b187481217	ValidationError: User validation failed: password: Path `password` is required.	POST	/api/users	undefined
+20220920	00:10:22	d70c1623-1bf4-42da-8cde-2a3eb7f0128d	TypeError: cursor.skip is not a function	GET	/api/products	undefined
+20220920	00:12:11	c06556a6-7d4d-4f74-84e2-788416db9a2c	TypeError: cursor is not a function	GET	/api/products	undefined
+20220920	00:14:55	b8421d25-f411-405d-ab21-f7355c8d0b28	TypeError: Product.find(...).skip(...).limit(...).toArray is not a function	GET	/api/products	undefined
