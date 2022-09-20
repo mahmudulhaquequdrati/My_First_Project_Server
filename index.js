@@ -51,7 +51,6 @@ app.use(errorHandler);
 
 mongoose.connection.once("open", () => {
   console.log(`Connected to Server!`);
-  app.listen(PORT, () => console.log(`Server running in port no : ${PORT}`));
 });
 mongoose.connection.on("error", (err) => {
   console.log(err);
@@ -60,3 +59,4 @@ mongoose.connection.on("error", (err) => {
     "mongoErrLog.log"
   );
 });
+app.listen(PORT, () => console.log(`Server running in port no : ${PORT}`));
