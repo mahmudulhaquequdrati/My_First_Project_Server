@@ -14,7 +14,7 @@
                 type: String,
                 required: true
             }
-            ullname : {
+            fullname : {
                 type: String,
                 required: true
             }
@@ -24,14 +24,74 @@
         }
 ```
 
-==============================Product API==========================
+## Products API
+
+- 🔗 /api/products
 
 ```
-        {
-             email : {
-                type: String,
-                required: password
-            }
-        }
+{
+    thumbnail: {
+      type: String,
+      required: true,
+    },
+    shoeName: {
+      type: String,
+      required: true,
+    },
+    active: {
+      type: Boolean,
+      default: true,
+    },
+    retailPrice: {
+      type: Number,
+      required: true,
+    },
+    description: {
+      type: String,
+      required: true,
+    },
+    brand: {
+      type: String,
+      required: true,
+    },
+    releaseDate: {
+      type: String,
+    },
+  },
+  {
+    timestamps: true,
+  }
 ```
-# api-for-e-commer-mahmudul-vai
+
+## Comment API
+
+- 🔗 /api/comment
+
+```
+{
+    comment: {
+    type: String,
+    required: true,
+  },
+  productId: {
+    type: String,
+    required: true,
+  },
+  email: {
+    type: String,
+    required: true,
+  },
+  userImage: {
+    type: String,
+  },
+  name: {
+    type: String,
+    required: true,
+  },
+  date: {
+    type: Date,
+    default: Date.now(),
+  },
+}
+
+```
