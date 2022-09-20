@@ -1,14 +1,16 @@
 const Comment = require("../models/Comment");
 const express = require("express");
+const checkLogin = require("../middleware/checkLogin");
 const comment = express.Router();
 // Make a new comment
-comment.post("/", async (req, res) => {
+comment.post("/", checkLogin, async (req, res) => {
   try {
     const newComment = await new Comment({
       comment: req.body.comment,
       productId: req.body.productId,
       email: req.body.email,
       userImage: req.body.userImage,
+      name: req.body.name,
     });
     newComment.save().then((comment) => {
       res.status(200).json({
@@ -33,10 +35,10 @@ comment.get("/", async (req, res) => {
     console.log(err);
   }
 });
-// Delete comment
-comment.get("/single/:id", async (req, res) => {
+// Get all the comments of a single product
+comment.get("/single", async (req, res) => {
   try {
-    const data = await Comment.find({ postId: req.params.id });
+    const data = await Comment.find({ productId: req.query.productId });
     res.status(200).json({
       message: "Comment loaded successfully",
       data,

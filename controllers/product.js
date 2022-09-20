@@ -6,15 +6,25 @@ const { Cursor } = require("mongoose");
 // @route GET /users
 // @access Private
 const getAllProduct = asyncHandler(async (req, res) => {
-  const pageSize = 10;
-  const currentPage = req.query.page || 1;
-  const products = await Product.find()
-    .skip(pageSize * (currentPage - 1))
-    .limit(pageSize);
-  const productNum = await Product.countDocuments();
-  res.setHeader("max-records", productNum);
-  res.status(200).json({
-    data: products,
+  const count = await Product.countDocuments({});
+  const page = req.query.page;
+  const limit = parseInt(req.query.limit);
+
+  let allProducts;
+
+  if (page) {
+    allProducts = await Product.find({})
+      .skip(page * limit)
+      .limit(limit)
+      .lean();
+  } else {
+    allProducts = await Product.find({}).lean();
+  }
+  // reverse the array
+
+  res.json({
+    count,
+    allProducts,
   });
 });
 

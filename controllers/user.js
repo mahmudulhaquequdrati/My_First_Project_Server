@@ -118,6 +118,7 @@ const loginHandle = async (req, res) => {
         res.status(200).json({
           message: "User Login Successfully",
           token: token,
+          user: userLogging,
         });
       }
     } else {
@@ -127,8 +128,6 @@ const loginHandle = async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 };
-
-
 
 module.exports = {
   getSingleUser,
