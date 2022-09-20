@@ -1,5 +1,5 @@
-require("dotenv").config();
 const express = require("express");
+require("dotenv").config();
 const app = express();
 const port = process.env.PORT || 5000;
 const path = require("path");
@@ -15,7 +15,6 @@ const userRoute = require("./routes/user");
 const productRoute = require("./routes/product");
 const authRoute = require("./routes/authRoute");
 const commentRoute = require("./routes/commentRoute");
-const host = "0.0.0.0";
 
 // Connect with Database
 connectDB();
@@ -25,10 +24,10 @@ app.use(logger);
 app.use(cors(corsOptions));
 app.use(express.json());
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, "/public")));
+// app.use(express.static(path.join(__dirname, "/public")));
 
 // Application - root Page
-app.use("/", require("./routes/root"));
+// app.use("/", require("./routes/root"));
 
 // All Route here
 app.use("/api/users", userRoute);
@@ -37,21 +36,22 @@ app.use("/api/auth", authRoute);
 app.use("/api/comment", commentRoute);
 
 // Not Found Or 404 error Page
-app.all("*", (req, res) => {
-  res.status(404);
-  if (req.accepts("html")) {
-    res.sendFile(path.join(__dirname, "views", "404.html"));
-  } else if (req.accepts("json")) {
-    res.json({ message: "404 Not Found!" });
-  } else {
-    res.type("txt".send("404 Not Found!"));
-  }
-});
+// app.all("*", (req, res) => {
+//   res.status(404);
+//   if (req.accepts("html")) {
+//     res.sendFile(path.join(__dirname, "views", "404.html"));
+//   } else if (req.accepts("json")) {
+//     res.json({ message: "404 Not Found!" });
+//   } else {
+//     res.type("txt".send("404 Not Found!"));
+//   }
+// });
 
 app.use(errorHandler);
 
 mongoose.connection.once("open", () => {
   console.log(`Connected to Server!`);
+  app.listen(port, () => console.log(`Server running in port no : ${port}`));
 });
 mongoose.connection.on("error", (err) => {
   console.log(err);
@@ -60,6 +60,3 @@ mongoose.connection.on("error", (err) => {
     "mongoErrLog.log"
   );
 });
-app.listen(process.env.PORT || 5000, host, () =>
-  console.log(`Server running in port no : ${process.env.PORT}`)
-);
