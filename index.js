@@ -15,6 +15,7 @@ const userRoute = require("./routes/user");
 const productRoute = require("./routes/product");
 const authRoute = require("./routes/authRoute");
 const commentRoute = require("./routes/commentRoute");
+const host = "0.0.0.0";
 
 // Connect with Database
 connectDB();
@@ -59,4 +60,6 @@ mongoose.connection.on("error", (err) => {
     "mongoErrLog.log"
   );
 });
-app.listen(PORT, () => console.log(`Server running in port no : ${PORT}`));
+app.listen(process.env.PORT || 5000, host, () =>
+  console.log(`Server running in port no : ${PORT}`)
+);
