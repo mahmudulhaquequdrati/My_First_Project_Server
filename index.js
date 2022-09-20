@@ -1,7 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const app = express();
-const PORT = process.env.PORT || 5000;
+const port = process.env.PORT || 5000;
 const path = require("path");
 const { logger, logEvents } = require("./middleware/logger");
 const errorHandler = require("./middleware/errorHandler");
@@ -61,5 +61,5 @@ mongoose.connection.on("error", (err) => {
   );
 });
 app.listen(process.env.PORT || 5000, host, () =>
-  console.log(`Server running in port no : ${PORT}`)
+  console.log(`Server running in port no : ${process.env.PORT}`)
 );
