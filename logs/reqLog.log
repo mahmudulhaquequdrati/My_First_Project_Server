@@ -496,3 +496,24 @@
 20220920	01:34:53	34397cad-27d2-4898-811c-e2611a8130f1	GET	/api/products?limit=9&page=1	http://localhost:3000
 20220920	01:34:55	26cefed7-0183-4820-9695-836950b0952d	GET	/api/products?limit=9&page=0	http://localhost:3000
 >>>>>>> 3236a306792da3ad42b567fefc6523987b2ea4d9
+20220920	07:51:33	2c875453-6520-4f7c-884c-b2453388a4e0	GET	/api/users	undefined
+20220920	07:51:54	ae28db70-9df3-4892-8385-c6d6f536889f	GET	/api/users	undefined
+20220920	07:52:13	8150cfaf-a23e-4892-9c70-f91ddd389fcc	GET	/api/users	undefined
+20220920	07:52:33	1b31c454-6df3-47aa-a2b4-e3df91de64f2	GET	/api/users	undefined
+20220920	07:52:59	fe4073a9-13ea-4e63-8dbf-cd9e74dd84f1	POST	/api/auth	undefined
+20220920	07:53:26	698bdfca-8c43-4cc0-a15b-da422f58de4b	GET	/api/users	undefined
+20220920	07:53:32	296084eb-606b-4ba2-b94a-5cf64ab8758d	GET	/api/users/single	undefined
+20220920	07:54:06	d444aa74-59dd-4da7-9157-542357396f29	GET	/api/users/single	undefined
+20220920	07:54:24	6902006e-dc4f-47cf-9aad-bea87430bc92	GET	/api/users/single	undefined
+20220920	07:54:53	4363c5d9-0534-4894-825e-b2d5dcc56c48	GET	/api/users/single	undefined
+20220920	08:00:42	9813ae10-ae4d-45c6-ba9c-72ddcbf578fc	POST	/api/users/signin	undefined
+20220920	08:01:09	f8cf0fb4-2d7b-4067-a5ac-8c2166e92a93	POST	/api/users/signin	undefined
+20220920	08:01:28	1386d9ec-1bd4-47d0-a763-2ca1146733cc	POST	/api/users/signin	undefined
+20220920	08:02:30	86054fb4-b9e8-40dc-a5a4-922be141d848	POST	/api/users/signin	undefined
+20220920	08:05:02	09c255d8-6b9b-4c82-b4b0-bf7d684ffeaa	GET	/api/users/signin	undefined
+20220920	08:05:15	31ae1152-314c-44c9-a1c8-179e6889c4e3	GET	/api/users/profile	undefined
+20220920	08:05:41	5547e47c-1175-4f66-ba80-647cbc970fbc	GET	/api/users/profile	undefined
+20220920	08:05:42	46db72fe-f571-4f80-a5b7-efad006987d6	GET	/api/users/profile	undefined
+20220920	08:05:43	943cbe42-96ab-4f6b-b264-8f5fa1d0aa3e	GET	/api/users/profile	undefined
+20220920	08:05:44	f53217d5-a330-443a-9c02-094c458b7e0c	GET	/api/users/profile	undefined
+20220920	08:05:44	e54435f4-fb7e-413a-8015-ace82958b012	GET	/api/users/profile	undefined

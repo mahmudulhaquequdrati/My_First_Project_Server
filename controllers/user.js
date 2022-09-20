@@ -1,7 +1,7 @@
 const User = require("../models/user");
 const asyncHandler = require("express-async-handler");
 const bcrypt = require("bcrypt");
-
+const jwt = require("jsonwebtoken");
 /* ============DONE========= */
 // @desc Get all users
 // @route GET /users
@@ -19,15 +19,6 @@ const getAllUsers = asyncHandler(async (req, res) => {
   });
 });
 
-const getSingleUser = asyncHandler(async (req, res) => {
-  const data = await User.findById(req.body.id);
-  if (!data) {
-    return res.status(404).json({
-      message: "User not found!",
-    });
-  }
-  res.status(200).json(data);
-});
 /* ============DONE========= */
 // @desc Create new user
 // @route POST /users
@@ -89,6 +80,55 @@ const deleteUser = asyncHandler(async (req, res) => {
     message: "User deleted!",
   });
 });
+const getSingleUser = asyncHandler(async (req, res) => {
+  const data = await User.findById(req.body.id);
+  if (!data) {
+    return res.status(404).json({
+      message: "User not found!",
+    });
+  }
+  res.status(200).json(data);
+});
+
+// LOGIN USER
+const loginHandle = async (req, res) => {
+  try {
+    // let token
+    const { email, password } = req.body;
+    if (!email || !password) {
+      return res.status(400).json({ error: "Please enter all fields" });
+    }
+    const userLogging = await User.findOne({ email });
+    if (userLogging) {
+      const isMatch = await bcrypt.compare(password, userLogging.password);
+      // token = await userLogging.generateAuthToken();
+      if (!isMatch) {
+        res.status(400).json({ error: "Invalid Credientials" });
+      } else {
+        const token = jwt.sign(
+          {
+            email: userLogging.email,
+            userId: userLogging._id,
+          },
+          process.env.SECRET_JWT_KEY,
+          {
+            expiresIn: "7d",
+          }
+        );
+        res.status(200).json({
+          message: "User Login Successfully",
+          token: token,
+        });
+      }
+    } else {
+      return res.status(400).json({ error: "User does not Found!" });
+    }
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};
+
+
 
 module.exports = {
   getSingleUser,
@@ -96,4 +136,5 @@ module.exports = {
   createNewUser,
   updateUser,
   deleteUser,
+  loginHandle,
 };
