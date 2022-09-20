@@ -1,7 +1,8 @@
 const asyncHandler = require("express-async-handler");
-const User = require("../models/User");
+// const User = require("../models/User");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
+const user = require("../models/user");
 
 // @desc Login
 // @route POST
@@ -13,7 +14,7 @@ const login = asyncHandler(async (req, res) => {
       message: "All fields are required",
     });
   }
-  const foundUser = await User.findOne({ email }).exec();
+  const foundUser = await user.findOne({ email }).exec();
   if (!foundUser || !foundUser.active) {
     return res.status(401).json({
       message: "Unauthorized",
