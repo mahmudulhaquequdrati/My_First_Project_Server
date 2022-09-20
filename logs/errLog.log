@@ -39,6 +39,7 @@
 20220919	21:04:58	8b61eb85-bb67-495a-a96d-fa9c7d3866e2	ValidationError: User validation failed: password: Path `password` is required.	POST	/api/users	undefined
 20220919	21:05:17	3ccbab33-724d-4754-a66a-905613791969	ValidationError: User validation failed: password: Path `password` is required.	POST	/api/users	undefined
 20220919	21:05:19	712d245f-d418-4067-aca5-91b187481217	ValidationError: User validation failed: password: Path `password` is required.	POST	/api/users	undefined
+<<<<<<< HEAD
 20220919	21:35:12	bd5cecd2-3425-46de-b675-226626953ac5	TypeError: Converting circular structure to JSON
     --> starting at object with constructor 'MongoClient'
     |     property 's' -> object with constructor 'Object'
@@ -47,3 +48,8 @@
 20220919	22:17:40	4a07f270-9c5c-4eb5-92eb-acace0276738	ReferenceError: id is not defined	GET	/api/products/6327f79cea82c60023e2e46e	undefined
 20220919	22:21:22	b80b0339-54f2-4680-b5fc-8e216243d3ef	ReferenceError: Project is not defined	GET	/api/products/single	undefined
 20220919	22:21:23	302081eb-86d5-4cd9-aa5a-d847c68252dc	ReferenceError: Project is not defined	GET	/api/products/single	undefined
+=======
+20220920	00:10:22	d70c1623-1bf4-42da-8cde-2a3eb7f0128d	TypeError: cursor.skip is not a function	GET	/api/products	undefined
+20220920	00:12:11	c06556a6-7d4d-4f74-84e2-788416db9a2c	TypeError: cursor is not a function	GET	/api/products	undefined
+20220920	00:14:55	b8421d25-f411-405d-ab21-f7355c8d0b28	TypeError: Product.find(...).skip(...).limit(...).toArray is not a function	GET	/api/products	undefined
+>>>>>>> 3236a306792da3ad42b567fefc6523987b2ea4d9
