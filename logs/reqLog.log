@@ -882,3 +882,6 @@
 20220920	22:02:03	2a382d6e-3ed4-485c-8990-e51b66d534dc	GET	/api/products	http://localhost:3000
 20220920	22:02:12	d0e19c36-e7b7-4dbe-9214-12bc38cf4e45	GET	/api/products?limit=9&page=0	http://localhost:3000
 20220920	22:02:12	9808b471-0e61-4a51-81bc-8ba5ca8524a6	GET	/api/products?limit=9&page=0	http://localhost:3000
+20220920	23:04:53	69963590-f321-4383-b0ef-7635edcecbb5	GET	/	undefined
+20220920	23:04:59	98cea3d1-9da3-4b83-adbc-0af4466694ad	GET	/api/products	undefined
+20220920	23:05:00	26fbecfa-735a-4b34-a2b0-a94efa4d3d2c	GET	/favicon.ico	undefined
