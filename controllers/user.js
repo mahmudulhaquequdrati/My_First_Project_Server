@@ -19,6 +19,15 @@ const getAllUsers = asyncHandler(async (req, res) => {
   });
 });
 
+const getSingleUser = asyncHandler(async (req, res) => {
+  const data = await User.findById(req.body.id);
+  if (!data) {
+    return res.status(404).json({
+      message: "User not found!",
+    });
+  }
+  res.status(200).json(data);
+});
 /* ============DONE========= */
 // @desc Create new user
 // @route POST /users
@@ -82,6 +91,7 @@ const deleteUser = asyncHandler(async (req, res) => {
 });
 
 module.exports = {
+  getSingleUser,
   getAllUsers,
   createNewUser,
   updateUser,

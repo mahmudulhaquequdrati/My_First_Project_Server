@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const AutoIncrement = require("mongoose-sequence")(mongoose);
+// const AutoIncrement = require("mongoose-sequence")(mongoose);
 const productSchema = new mongoose.Schema(
   {
     thumbnail: {
@@ -35,11 +35,10 @@ const productSchema = new mongoose.Schema(
   }
 );
 
-productSchema.plugin(AutoIncrement, {
-  inc_field: "product",
-  id: "productNums",
-  start_seq: 500,
-});
+// productSchema.plugin(AutoIncrement, {
+//   inc_field: "product",
+//   id: "productNums",
+//   start_seq: 500,
+// });
 
-const Product = mongoose.model("Product", productSchema);
-module.exports = Product;
+module.exports = mongoose.model("Product", productSchema);

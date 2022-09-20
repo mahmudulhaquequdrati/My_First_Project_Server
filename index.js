@@ -13,6 +13,8 @@ const mongoose = require("mongoose");
 // Import Routes
 const userRoute = require("./routes/user");
 const productRoute = require('./routes/product');
+const authRoute = require("./routes/authRoute");
+
 
 // Connect with Database
 connectDB();
@@ -32,6 +34,7 @@ app.use('/', require("./routes/root"));
 // All Route here
 app.use('/api/users', userRoute);
 app.use('/api/products', productRoute);
+app.use('/api/auth', authRoute);
 
 
 // Not Found Or 404 error Page

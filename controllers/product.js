@@ -12,24 +12,25 @@ const getAllProduct = asyncHandler(async (req, res) => {
     .limit(pageSize);
   const productNum = await Product.countDocuments();
   res.setHeader("max-records", productNum);
-  res.status(200).json(products);
-  // if (!product) {
-  //   return res.status(400).json({
-  //     message: "No Product found!",
-  //   });
-  // }
-  // res.status(200).json({
-  //   message: "All product loaded",
-  //   data: product,
-  //   page: page,
-  //   pages: count / perPage
-  // });
+  res.status(200).json({
+    data: products,
+  });
 });
 
 /* ============DONE========= */
 // @desc Create new user
 // @route POST /users
 // @access Private
+const getSingleProduct = asyncHandler(async (req, res) => {
+  console.log(req.body.id);
+  const data = await Product.findById(req.body.id);
+  if (!data) {
+    return res.status(404).json({
+      message: "Product not found!",
+    });
+  }
+  res.status(200).json(data);
+});
 const createNewProduct = asyncHandler(async (req, res) => {
   const { thumbnail, shoeName, retailPrice, description, releaseDate, brand } =
     req.body;
@@ -82,4 +83,5 @@ module.exports = {
   createNewProduct,
   updateProduct,
   deleteProduct,
+  getSingleProduct,
 };
